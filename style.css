@@ -1,0 +1,209 @@
+:root{
+    --tw-bg-opacity: 1;
+    --main-color: rgba(0, 113, 188, var(--tw-bg-opacity));
+    --grey-back: rgb(247, 247, 247)
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-columns: [start-page] 1fr [center-start] repeat(8, [start-col] 1fr [end-col]) [center-end] 1fr [end-page];
+    grid-template-rows: min-content min-content min-content;
+    grid-row-gap: 10rem;
+}
+
+/* Heading style */
+.header{
+    grid-column: start-page/end-page;
+    background-color: var(--main-color);
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading_1{
+    font-size: 3rem;
+    color: white;
+}
+.blue{
+    color: var(--main-color);
+}
+
+.heading_companyName{
+    font-size: 1.5rem;
+    color: rgb(170, 170, 170);
+}
+
+/* Discussion display */
+
+.display{
+    grid-column: start-col 1/ end-col 8;
+    background-color: var(--grey-back);
+    width: 100%;
+    border-radius: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display_search{
+    transform: translate(0,-50%);
+}
+
+.display_search_box{
+    width: 100%;
+    font-size: 2.5rem;
+    border-radius: 5rem;
+    padding: 1rem;
+    padding-left: 2rem;
+}
+
+
+.display_discussion{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.block{
+    width: 80%;
+    min-height: 30vh;
+    max-height: 40vh;
+    background-color: white/*var(--main-color)*/;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 5rem;
+    margin-left: 2rem;
+    padding: 3rem;
+    border: 2px solid var(--main-color);
+    margin-bottom: 5rem;
+    overflow: hidden;
+}
+
+.heading_2{
+    font-size: 2rem;
+    color: black;
+    font-weight: 700;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.heading_2_small{
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 300;
+}
+
+.block_text_author{
+    font-size: 1.5rem;
+    color: rgb(170, 170, 170);
+}
+
+
+/* image */
+
+
+.block_img_img{
+    display: block;
+    height: 40%;
+
+}
+
+
+/* like and comment */
+
+.block_likeComment{
+
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+}
+
+.like_button,
+.comment_button{
+    background-color: white;
+    border: none;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--main-color);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.liked{
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+/* adding discussion */
+
+.addDiscuss{
+    grid-column: start-col 1/ end-col 8;
+    background-color: var(--grey-back);
+    width: 100%;
+    border-radius: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.addDiscuss_form{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addDiscuss_title,
+.addDiscuss_author,
+.add_button{
+    margin: 1.5rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 5rem;
+}
+
+.add_button{
+    color: white;
+    background-color: var(--main-color);
+    width: 10rem;
+    cursor: pointer;
+}
+
+.addDiscuss_image{
+    display: flex;
+    flex-direction: column;
+}
+
+.addDiscuss_image_img{
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 5rem;
+}
+
